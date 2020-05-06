@@ -1,0 +1,48 @@
+    <form #signupForm="ngForm">
+        <fieldset>
+            <legend>Sign-Up</legend>
+
+            <div class="form-group">
+                <label for="inputEmail">E-mail</label>
+                <input type="text" required [(ngModel)]="user.email" id="inputEmail" name="email" placeholder="Email">
+            </div>
+
+            <div ngModelGroup="password">
+                <div class='form-group'>
+                    <label for="inputPassword">Password</label>
+                    <input type="password" required [(ngModel)]="user.password.pwd" name="pwd" placeholder="Password">
+                </div>
+
+                <div class='form-group'>
+                    <label for="confirmPassword">Confirm-Password</label>
+                    <input type="password" required [(ngModel)]="user.password.confirmpwd" name="confirmpwd"
+                        placeholder="Confirm-Password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="select">Gender</label>
+                <select id="select" required [(ngModel)]="user.gender" name="gender">
+
+                    <option *ngFor="let g of gender" [value]="g"> {{g}}
+                    </option>
+                </select>
+            </div>
+
+            <div class="form-group checkbox">
+                <label>
+                    <input type="checkbox" [(ngModel)]="user.terms" name="terms"> Confirm Terms and Conditions
+                </label>
+            </div>
+
+            <div class="form-group">
+                <button type="reset">Cancel</button>
+                <input type="submit" [disabled]='!signupForm.valid'>
+            </div>
+
+        </fieldset>
+    </form>
+
+
+
+{{user | json }}

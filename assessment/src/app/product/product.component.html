@@ -1,0 +1,19 @@
+<!-- <a routerLink="product">Product</a> -->
+<div>
+    <a routerLink="aboutus" style="text-decoration: none; padding-right: 20px; color:darkorchid;">About</a>
+    <a routerLink="contactus"  style="text-decoration: none; padding-right: 20px; color:darkorchid;">Contact Us</a>
+    <button (click)="logout()" type="submit" style="float:right;" routerLink="logout">Logout</button>
+    </div>
+    <br><br>
+    <fieldset>
+        <legend>Products</legend>
+    <table>
+        <th >Name</th><th style="padding-left: 0pt;">Manufact.-Date</th><th>Expiry-Date</th><th>Brand</th><th>currency</th>
+        <tr><td style="padding-right: 50px;">{{product[0].name}}</td><td style="padding-right: 50px;">{{product[0].manufdate| date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[0].expdate | date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[0].brand}}</td><td style="padding-right: 50px;">{{product[0].price | currency:"INR":true}}</td></tr>
+        <tr>{{product[1].name}}<td style="padding-right: 50px;">{{product[1].manufdate| date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[1].expdate | date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[1].brand}}</td><td style="padding-right: 50px;">{{product[1].price | currency:"INR":true}}</td></tr>
+        <tr>{{product[2].name}}<td style="padding-right: 50px;">{{product[2].manufdate| date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[2].expdate | date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[2].brand}}</td><td style="padding-right: 50px;">{{product[2].price | currency:"INR":true}}</td></tr>
+        <tr>{{product[3].name}}<td style="padding-right: 50px;">{{product[3].manufdate| date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[3].expdate | date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[3].brand}}</td><td style="padding-right: 50px;">{{product[3].price | currency:"INR":true}}</td></tr>
+        <tr>{{product[4].name}}<td style="padding-right: 50px;">{{product[4].manufdate| date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[4].expdate | date:'shortDate'}}</td><td style="padding-right: 50px;">{{product[4].brand}}</td><td style="padding-right: 50px;">{{product[4].price | currency:"INR":true}}</td></tr>
+    
+    </table>
+    </fieldset>

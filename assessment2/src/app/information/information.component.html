@@ -1,0 +1,31 @@
+<br><br>
+<div>
+    <h4><strong><em>{{text}}</em></strong></h4>
+</div>
+
+<br>
+<form id="information-form" [formGroup]="informationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label class="center-block">First-Name :
+            <input class="form-control" formControlName="firstname">
+        </label><br><br>
+        <label class="center-block">Last-Name :
+            <input class="form-control" formControlName="lastname">
+        </label><br><br>
+        <label class="center-block">Salary : &nbsp;&nbsp;
+            <input class="form-control" formControlName="salary">
+        </label><br><br>
+        <label class="center-block">Street-1 :
+            <input class="form-control" formControlName="street1">
+        </label><br><br>
+        <label class="center-block">Street-2 :
+            <input class="form-control" formControlName="street2">
+        </label><br><br>
+        <label class="center-block">Location :
+            <input class="form-control" formControlName="location">
+        </label><br><br>
+
+
+    </div>
+    <button type="submit" [disabled]="!informationForm.valid" class="btn btn success">Save</button>
+</form>

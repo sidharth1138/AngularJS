@@ -1,0 +1,18 @@
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <th>Id</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+        <th>Employee Age</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of (response|async)">
+            <td>{{item.data.id}} </td>
+            <td>{{item.data.employee_name}}</td>
+            <td>{{item.data.employee_salary}}</td>
+
+        </tr>
+
+    </tbody>
+
+</table>

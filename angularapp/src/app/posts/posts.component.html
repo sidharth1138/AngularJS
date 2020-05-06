@@ -1,0 +1,22 @@
+<!-- 
+<div *ngFor="let item of (response|async)">
+    {{item.title}} {{item.id}}{{item.userId}}
+</div> -->
+
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <th>User-Id</th>
+        <th>Id</th>
+        <th>Title</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of (response|async)">
+            <td>{{item.userId}} </td>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+
+        </tr>
+
+    </tbody>
+
+</table>

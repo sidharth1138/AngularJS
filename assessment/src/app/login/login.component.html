@@ -1,0 +1,96 @@
+<!-- <html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+ -->
+
+<!-- <div>
+    <form>
+        <input type="text" placeholder="Enter Username "><br>&nbsp;
+        <input type="password" placeholder="Enter Password">
+    </form>
+    <button type="submit">LOG-IN</button>
+</div>
+ -->
+
+
+<!-- 
+<body>
+    <br>
+    <form #loginForm="ngForm" >
+        <fieldset>
+            <div style="text-align: center;" ><legend> Login </legend></div>
+
+            <table width="20%" align="center">
+
+                <br>
+                <tr>
+                    <td>Email  :</td>
+                    <td><input type="text" required [(ngModel)]="admin.email" size=25 name="email"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="Password" required [(ngModel)]="admin.pwd" size=25 name="pwd"></td>
+                </tr>
+                <br>
+                <tr>
+
+                    <td><input type="submit" [disabled]="!loginForm.valid" value="Login" routerLink="/product"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </form> -->
+    <!-- <script language="javascript">
+        function check(form) {
+
+            if (form.userid.value == "Roseindia" && form.pwd.value == "Roseindia") {
+                return true;
+            }
+            else {
+                alert("Error Password or Username")
+                return false;
+            }
+        }
+    </script> -->
+<!-- 
+</body>
+
+</html> -->
+
+
+<h1 style="text-align: center">
+    Angular Login
+</h1>
+<div class="login">
+    <h2 class="login-header">Log-In</h2>
+    <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors}">
+            <input type="email" placeholder="Email" formControlName="email">
+        </p>
+        <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+            <div *ngIf="formControls.email.errors.required">Email is required</div>
+        </div>
+
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors}">
+            <input type="password" placeholder="password" formControlName="password">
+        </p>
+        <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+            <div *ngIf="formControls.password.errors.required">Password is required</div>
+        </div>
+        <p><input type="submit" value="Log in"></p>
+
+
+    </form>
+</div>
